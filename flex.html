@@ -35,15 +35,23 @@
   <div class="playground">
     <style>
      .menu-container {
-        width: 100px;
-        background-color: rgb(214, 171, 212);
-        text-align: center;
+        width: fit-content;
+        border:1px solid rgb(248, 245, 245) ;
+        flex-direction: column;
+        margin: 10px;
+       display: flex;
+
        
      }
      .menu-item {
         color: #ffffff;
-        padding: 10px;
-        border-top:1px solid rgb(248, 245, 245) ;
+        padding: 4px 8px;
+        border:1px solid rgb(248, 245, 245) ;
+        text-align: center;
+        background: #cd8484;
+     }
+     .menu-item:last-child{
+      border-bottom:unset ;
      }
     </style>
 
@@ -65,9 +73,18 @@
   <div class="playground">
     <style>
        .header-container{
-        justify-content: space-between;
         display: flex;
         border:2px solid;
+        margin: 10px;
+        padding: 10px;
+       }
+       .header-content-left{
+        display: flex;
+       }
+       .header-content{
+        text-align: center;
+        flex-grow: 1;
+        align-self: center;
        }
     </style>
 
@@ -86,11 +103,21 @@
   <div class="playground">
     <style>
        .navigation-container{
-        justify-content: space-between;
         display: flex;
         border:2px solid;
-        text-align: center;
+        margin: 10px;
        } 
+       .navigation-item{
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        padding: 10px;
+        align-items: center;
+       }
+       .navigation-item-icon{
+        text-align: center;
+       }
     </style>
 
     <div class="navigation-container">
@@ -131,31 +158,45 @@
 
         .card-list-container{
             display: flex;
-            justify-content:space-between;
+            flex-direction: row;
             flex-wrap: wrap;
+            margin: 10px;
         }
         .card-container {
-            background-color: white;
+            border-color: #ffffff;
             display: flex;
-            width: 200px;
-            height: 300px;   
-            
+            width: 50px;
+            border-radius: 10px;
         }
-
+        .card-container{
+          width: 200px;
+          border-color:1px solid #000 ;
+          border-radius: 10px;
+          margin-right: 20px;
+        }
+        .card-content{
+          background: #ffffff;
+        }
         img { 
             display: flex;
             width: 200px; 
         }
         .card-content-detail-section{
-          margin: 10px;
+          padding: 10px;
         }
         .product-price{
-          text-align: end;
+          text-align: right;
+          font-family: monospace;
+          font-size: 24px;
+          font-weight: bold;
         }
         .product-description{
           color: #848181;
         }
-
+        .product-name{
+          font-size: 18px;
+          font-weight: bold;
+        }
 
     </style>
 
@@ -259,9 +300,9 @@
           </div>
         </div>
       </div>
-
     </div>
 </div>
+
   <h2>Sidebar</h2>
   <h3>example</h3>
   <img src="./images/layouts/sidebar.png">
@@ -269,27 +310,32 @@
   <h3>playground</h3>
   <div class="playground">
     <style>
+
        
         .sidebar-container{
-            width: 200px;
-    
-            border: 1px solid;
-            background-color: rgba(158, 215, 227, 0.588);
-            
-        }
-        .sidebar-footer-section{
-            padding: 5px;
-            border-top:1px solid;
-        }
-        .sidebar-profile-section{
-            font-size: 25px;
-            border-bottom:1px solid  ;
-         
+            width: 250px;
+            background-color: rgba(113, 182, 242, 0.588);
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            border-right:2px solid #cd8484 ;
         }
         .sidebar-menu-section{
-            height: 100px;
+            flex-grow: 1;
         }
-        
+        .sidebar-profile-section{
+          font-size: 25px;
+          border-bottom: 1px solid #3950c3;
+        }
+        .sidebar-menu-item{
+          padding: 4px 8px;
+        }
+        .sidebar-footer-section{
+          border-top:2px solid #000 ;
+        }
     </style>
 
     <div class="sidebar-container">
@@ -306,7 +352,7 @@
           Logout
         </div>
       </div>
-    </div>
+  
   </div>
   <br>
 </body>
